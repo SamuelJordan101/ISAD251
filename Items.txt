@@ -1,6 +1,7 @@
-CustomerID
-CustomerName
-CustomerPhone
+UserID
+UserName
+UserPhone
+Admin
 CategoryID
 CategoryName
 ItemID
