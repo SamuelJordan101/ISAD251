@@ -1,0 +1,13 @@
+CustomerID
+CustomerName
+CustomerPhone
+CategoryID
+CategoryName
+ItemID
+ItemName
+ItemCost
+ItemAvailable
+OrderID
+OrderDate
+ItemQuantity
+ItemAmount
