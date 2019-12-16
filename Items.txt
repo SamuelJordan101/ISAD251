@@ -12,3 +12,4 @@ OrderID
 OrderDate
 ItemQuantity
 ItemAmount
+TableNumber
