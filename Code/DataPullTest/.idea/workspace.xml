@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b67e7566-0da0-4796-a854-2fda0b7146bb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../MakeTablesQuery.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../~$ta Dictionary.docx" beforeDir="false" />
-    </list>
+    <list default="true" id="e69c3ee7-aead-4ff2-9fd1-3730dcb8e8d3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,21 +13,17 @@
       <executable />
     </execution>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="C:\Users\Sam\Documents\GitHub\SOFT251\Code\.idea" />
-      </set>
-    </option>
-  </component>
-  <component name="ProjectId" id="1V6zgpc5k2y29XeZIHHdYNG52SB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1VCqZTyRvGSnQY1YHNBVfLpwoKv" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Code" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -49,27 +42,17 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b67e7566-0da0-4796-a854-2fda0b7146bb" name="Default Changelist" comment="" />
-      <created>1576588446582</created>
+      <changelist id="e69c3ee7-aead-4ff2-9fd1-3730dcb8e8d3" name="Default Changelist" comment="" />
+      <created>1576767479799</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1576588446582</updated>
-      <workItem from="1576588450649" duration="1250000" />
+      <updated>1576767479799</updated>
+      <workItem from="1576767481099" duration="1040000" />
+      <workItem from="1576770331608" duration="3076000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
