@@ -32,7 +32,6 @@ CREATE TABLE Orderitem (
 order_id INT(8) NOT NULL,
 item_id INT(8) NOT NULL,
 item_quantity INT(3) NOT NULL,
-table_number INT(3) NOT NULL,
 PRIMARY KEY (order_id, item_id));
 
 #Foreign Keys
