@@ -26,3 +26,4 @@ date_default_timezone_set('Europe/London');
                                                   width="220px" height="45px"></a>
     <a href="login.php" class="btn btn-info" role="button">Sign Out</a>
 </nav>
+</body>
