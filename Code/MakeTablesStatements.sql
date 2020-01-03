@@ -25,7 +25,6 @@ category_id INT(8) NOT NULL,
 item_name VARCHAR(30) NOT NULL,
 item_cost DECIMAL(4,2) NOT NULL,
 item_amount INT (5) NOT NULL,
-item_available BOOLEAN NOT NULL,
 PRIMARY KEY (item_id, category_id));
 
 CREATE TABLE Orderitem (
