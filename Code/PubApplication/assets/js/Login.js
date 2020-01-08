@@ -1,11 +1,12 @@
 function userCheck () {
     let userInput = document.getElementById("username").value;
 
-    if (userInput == "001") {
+    if (userInput == "1") {
         window.location.href = "../public/index.php";
-
-    } else if (userInput == "002") {
+        alert();
+    } else if (userInput == "2") {
         window.location.href = "../public/admin.php";
+        alert();
     } else {
         document.getElementById("username").value = '';
         window.alert("User ID is not valid");

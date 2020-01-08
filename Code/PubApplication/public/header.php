@@ -22,8 +22,9 @@ date_default_timezone_set('Europe/London');
 </head>
 <body>
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-    <a class="navbar-brand" href="index.php"><img src="../assets/img/samspub.png" class="d-inline-block align-top"
-                                                  width="220px" height="45px"></a>
+    <a class="navbar-brand" href="javascript:history.back()"><img src="../assets/img/samspub.png"
+                                                                  class="d-inline-block align-top"
+                                                                  width="220px" height="45px"></a>
     <a href="login.php" class="btn btn-info" role="button">Sign Out</a>
 </nav>
 </body>
