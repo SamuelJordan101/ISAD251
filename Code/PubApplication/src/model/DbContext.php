@@ -197,4 +197,20 @@ class DbContext
         $return = $statement->execute();
         return $return;
     }
+
+    public function getApiData($table) {
+        $sql = "SELECT * FROM ";
+
+        switch ($table) {
+            case "orders" : $sql = $sql." orders";
+                break;
+        }
+
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+
+        $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $resultSet;
+    }
+
 }
