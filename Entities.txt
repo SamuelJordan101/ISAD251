@@ -1,5 +1,0 @@
-User
-Category
-Order
-Item
-OrderItem
