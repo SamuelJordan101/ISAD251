@@ -76,3 +76,9 @@ Here are the results that i got from https://webaccessibility.com after i had pu
 
 ![WAI Results Screenshot](Screenshots/WAI%20Test.PNG)
 
+### Browser Compatability Test
+
+Using PowerMapper.com i tested a couple of my pages in different browsers, getting the results below:
+
+![Browser Test Screenshot](Screenshots/BrowserCompatabilityTest.PNG)
+
