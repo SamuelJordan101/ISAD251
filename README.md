@@ -3,7 +3,11 @@
 # ISAD251
 My repository for demonstrating ISAD251 database application development
 
-This is the repository for demonstrating my pub application. This application is designed to let users order food and drinks and let admins change all of the details in the application.
+This is the repository for demonstrating my pub application. This application is designed to let users order food and drinks and let admins change all of the details in the application. All of the requirements are able to be completed and all work as they should.
+
+When first opening the application, you will be presented with a login screen. Here, you must login, with either a 1, as a user, or 2, as an admin. From here you are able to complete the user stories fully.
+
+For creating an order and adding items as a user, you must first create the order, after which you are able to add items to it on the user add to order page.
 
 ## Requirements
 1. As a customer I wish to order a drink/snack.
@@ -59,7 +63,7 @@ I used one image, which i made myself
 ![Admin Add New Items Screenshot](Screenshots/Program%20Screenshots/AdminAddNewItems.PNG)
 
 ### Admin Edit Items
-Note: Item is taken off the customers menu if the amount is 0
+Note: Item is taken off of the customers menu if the amount is 0
 
 ![Admin Edit Items Screenshot](Screenshots/Program%20Screenshots/AdminEditItems.PNG)
 
