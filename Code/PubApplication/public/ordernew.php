@@ -43,7 +43,7 @@ if (isset($_POST['AddOrder']))
 
 <?php
 $resultString = "<div class=\"row\"><div class=\"col-sm-12\"><div class=\"card border-success mb-3\">
-                    <div class=\"card-header bg-success text-white\"> Your order has been created<br><br><button type=\"button\" name=\"AddItems\" style=\"\" onclick=\"window.location.href ='orderadd'\" class=\"btn btn-secondary\">Add Items</button><br></div></div></div></div>";
+                    <div class=\"card-header bg-success text-white\"> Your order has been created<br><br><button type=\"button\" name=\"AddItems\" style=\"\" onclick=\"window.location.href ='orderadd.php'\" class=\"btn btn-secondary\">Add Items</button><br></div></div></div></div>";
 if ($success > 0) {
     echo $resultString;
 }
