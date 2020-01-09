@@ -72,7 +72,7 @@ Note: Item is taken off the customers menu if the amount is 0
 ![Admin Current Items Screenshot](Screenshots/Program%20Screenshots/AdminCurrentItems.PNG)
 
 ## WAI Screenshot
-Here are the results that i got from https://webaccessibility.com/?fbclid=IwAR2zgCbJF0hCbfo8ln6jCB7AZxQkgEqcfCk_iLPJziQArYkqEp7w82heWFk after i had put in the URL for the site
+Here are the results that i got from https://webaccessibility.com after i had put in the URL for the site
 
 ![WAI Results Screenshot](Screenshots/WAI%20Test.PNG)
 
