@@ -25,6 +25,11 @@ I used one image, which i made myself
 
 ![SamsPub Logo](Code/PubApplication/assets/img/samspub.png)
 
+## Trello Board
+
+WHilst a trello board is not needed, it was quite helpful in knowing what had to be done and what i had completed, so i have linked it here.
+[Trello Board](https://trello.com/b/ovQXtVP5/isad-251-cw)
+
 ## Youtube Link
 
 [ISAD 251 Demonstration Video](https://youtu.be/WGENIRNBOKo)
