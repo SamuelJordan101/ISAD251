@@ -1,5 +1,5 @@
 <?php
-
+//this is the main footer data which is included in every page
 ?>
 
 <style>

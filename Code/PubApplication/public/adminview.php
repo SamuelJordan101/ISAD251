@@ -1,4 +1,5 @@
 <?php
+//this is the page for the admin to view all of the orders
 include_once 'header.php';
 include_once '../src/model/DbContext.php';
 
@@ -19,6 +20,8 @@ include_once '../src/model/DbContext.php';
     <tbody>
 
     <?php
+
+    //getting the data and outputting it in a table
 
     $Item_Row = "";
 

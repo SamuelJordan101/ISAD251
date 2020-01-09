@@ -1,4 +1,5 @@
 <?php
+//page where a new order can be made
 error_reporting(0);
 include_once 'header.php';
 include_once '../src/model/DbContext.php';
@@ -8,6 +9,7 @@ include_once '../src/model/orders.php';
 if (!isset($db)) {
     $db = new DbContext();
 }
+//php which calls the 'AddOrder' function
 if (isset($_POST['AddOrder']))
 {
     $request = new orders(0,$_POST['user_id'],0 ,$_POST['table_number']);

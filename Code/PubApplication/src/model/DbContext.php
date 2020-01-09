@@ -32,6 +32,7 @@ class DbContext
 
     public function AvailableItems()
     {
+        //calls my stored procedure
         $sql = "SELECT * FROM `availableitems`";
 
         $statement = $this->connection->prepare($sql);
@@ -53,6 +54,7 @@ class DbContext
 
     public function OrderNew($request)
     {
+        //calls my stored procedure
         $sql = "CALL OrderNew(:UserID, :TableNumber)";
         $statement = $this->connection->prepare($sql);
 
@@ -65,6 +67,7 @@ class DbContext
 
     public function OrderCancel($request)
     {
+        //calls my stored procedure
         $sql = "CALL OrderCancel(:order_id)";
         $statement = $this->connection->prepare($sql);
 
@@ -76,6 +79,7 @@ class DbContext
 
     public function OrderView()
     {
+        //calls my stored procedure
         $sql = "SELECT * FROM `allorders`";
 
         $statement = $this->connection->prepare($sql);
@@ -97,6 +101,7 @@ class DbContext
 
     public function ItemView()
     {
+        //gets all the data from a view in my database
         $sql = "SELECT * FROM `allitems`";
 
         $statement = $this->connection->prepare($sql);
@@ -118,6 +123,7 @@ class DbContext
 
     public function ItemEdit($request)
     {
+        //calls my stored procedure
         $sql = "CALL AdminEditItem(:ItemID, :CategoryID, :ItemName, :ItemCost, :ItemAmount)";
         $statement = $this->connection->prepare($sql);
 
@@ -133,6 +139,7 @@ class DbContext
 
     public function Categories()
     {
+        //gets all the data for categories
         $sql = "SELECT * FROM `category`";
 
         $statement = $this->connection->prepare($sql);
@@ -154,6 +161,7 @@ class DbContext
 
     public function OrderItemView()
     {
+        //gets all the order items
         $sql = "SELECT * FROM `orderitem`";
 
         $statement = $this->connection->prepare($sql);
@@ -174,6 +182,7 @@ class DbContext
     }
 
     public function OrderItemAdd($request) {
+        //code to add a new order item to an order
         $sql = "CALL OrderAdd(:OrderID, :ItemID, :ItemQuantity)";
         $statement = $this->connection->prepare($sql);
 
@@ -186,6 +195,7 @@ class DbContext
     }
 
     public function AdminItemAdd($request) {
+        //code to add a new order item
         $sql = "CALL AdminNewItem(:CategoryID, :ItemName, :ItemCost, :ItemAmount)";
         $statement = $this->connection->prepare($sql);
 
@@ -199,8 +209,10 @@ class DbContext
     }
 
     public function getApiData($table) {
+        //api function
         $sql = "SELECT * FROM ";
 
+        //switch to go through all of the values it could be to check what table to go to
         switch ($table) {
             case "orders" : $sql = $sql." orders";
                 break;

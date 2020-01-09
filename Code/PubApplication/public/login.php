@@ -1,4 +1,5 @@
 <?php
+//this is my login page which chooses between showing customer and admin pages
 date_default_timezone_set('Europe/London');
 ?>
 
@@ -28,13 +29,14 @@ date_default_timezone_set('Europe/London');
     <div class="input-group-prepend">
         <span class="input-group-text" id="inputGroup-sizing-default">User ID</span>
     </div>
-    <input type="text" id="username" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    <input type="text" id="username" class="form-control" aria-label="Sizing example input" placeholder="Customer = 1, Admin = 2" aria-describedby="inputGroup-sizing-default">
     <a href="" onclick="userCheck()" id="login" class="btn btn-info" role="button" style="margin-left: 2%">Login</a>
 
     <script>
+        //
         var input = document.getElementById("username");
 
-        // Execute a function when the user releases a key on the keyboard
+        // Enter the user id when the user pressed enter
         input.addEventListener("keyup", function(event) {
             if (event.keyCode === 13) {
                 event.preventDefault();

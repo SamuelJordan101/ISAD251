@@ -1,4 +1,5 @@
 <?php
+//this is the page where an order is made
 error_reporting(0);
 include_once 'header.php';
 include_once '../src/model/DbContext.php';
@@ -9,6 +10,7 @@ include_once '../src/model/orders.php';
 if (!isset($db)) {
     $db = new DbContext();
 }
+//php which calls the 'AddOrderItem' function
 if (isset($_POST['AddOrderItem']))
 {
     $request = new orderitem($_POST['order_id'],$_POST['item_id'],$_POST['item_quantity']);
@@ -30,6 +32,8 @@ if (isset($_POST['AddOrderItem']))
                 <option selected>Choose...</option>
                 <?php
                 $optionString = "";
+
+                //this is the php to prepopulate a dropdown
 
                 $db = new DbContext();
                 $order = $db->OrderView();
@@ -53,6 +57,8 @@ if (isset($_POST['AddOrderItem']))
                 <option selected>Choose...</option>
                 <?php
                 $optionString = "";
+
+                //this is the php to prepopulate a dropdown
 
                 $db = new DbContext();
                 $item = $db->AvailableItems();
@@ -79,6 +85,8 @@ if (isset($_POST['AddOrderItem']))
 </form>
 
 <?php
+//php for if the adding is done successfully
+
 $resultString = "<div class=\"row\"><div class=\"col-sm-12\"><div class=\"card border-success mb-3\">
                     <div class=\"card-header bg-success text-white\"> The Item has been Added</div></div></div></div>";
 if ($success > 0) {

@@ -1,4 +1,5 @@
 <?php
+//page where the customer can see all of the orders and what they have ordered
 include_once 'header.php';
 include_once '../src/model/DbContext.php';
 

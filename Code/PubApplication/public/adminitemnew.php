@@ -1,4 +1,5 @@
 <?php
+//this is the page for the admin to add a new item to the menu
 error_reporting(0);
 include_once 'header.php';
 include_once '../src/model/DbContext.php';
@@ -7,6 +8,7 @@ include_once '../src/model/orderitem.php';
 include_once '../src/model/orders.php';
 include_once '../src/model/category.php';
 
+//user input for the 'AddOrderItem' function
 if (!isset($db)) {
     $db = new DbContext();
 }

@@ -1,3 +1,8 @@
+/*
+I was having problems with the footer staying at the bottom, sometimes it covered things up and others it would be
+Randomly placed so this fixes those issues
+ */
+
 *{
     padding: 0;
     margin: 0;

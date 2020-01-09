@@ -1,4 +1,5 @@
 <?php
+//page where the customer can cancel an order
 error_reporting(0);
 include_once 'header.php';
 include_once '../src/model/DbContext.php';
@@ -7,6 +8,7 @@ include_once '../src/model/orders.php';
 if (!isset($db)) {
     $db = new DbContext();
 }
+//php which calls the 'OrderCancel' function
 if (isset($_POST['OrderCancel']))
 {
     $request = new orders($_POST['order_id'],0,0 ,0);
@@ -22,15 +24,35 @@ if (isset($_POST['OrderCancel']))
     <div class="form-row" style="margin-left: 25%; width: 50%">
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-default">Order ID</span>
+                <label class="input-group-text" for="inputGroupSelect01">Order ID</label>
             </div>
-            <input type="text" name="order_id" id="order_id" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <select class="custom-select" id="order_id" name="order_id">
+                <option selected>Choose...</option>
+                <?php
+                // php to prepopulate a dropdown
+                $optionString = "";
+
+                $db = new DbContext();
+                $order = $db->OrderView();
+
+                if ($order) {
+                    foreach ($order as $orders) {
+                        $optionString.="<option value=".$orders->order_id().">".$orders->order_id()."</option>";
+                    }
+                }
+
+
+
+                echo $optionString;
+                ?>
+            </select>
         </div>
     </div>
     <button type="submit" name="OrderCancel" style="" class="btn btn-secondary">Cancel Order</button><br><br>
 </form>
 
 <?php
+// php for a successful order cancel
 $resultString = "<div class=\"row\"><div class=\"col-sm-12\"><div class=\"card border-success mb-3\">
                     <div class=\"card-header bg-success text-white\"> Your order has been cancelled</div></div></div></div>";
 if ($success > 0) {
@@ -52,6 +74,8 @@ if ($success > 0) {
     <tbody>
 
     <?php
+
+    //outputs the orders in a table
 
     $Item_Row = "";
 

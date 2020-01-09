@@ -1,4 +1,8 @@
 function userCheck () {
+
+    // this is the java for the login page, this validates the input against either 1 for a normal user
+    // or 2 for an admin
+
     let userInput = document.getElementById("username").value;
 
     if (userInput == "1") {

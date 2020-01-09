@@ -1,6 +1,9 @@
 <?php
+//this is the admin home page, it has links to all the admin functions
 include_once 'header.php';
 ?>
+
+
 
 <body style="text-align: center">
     <br><h1>Admin Options</h1><br>

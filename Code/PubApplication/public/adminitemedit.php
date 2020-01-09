@@ -1,10 +1,12 @@
 <?php
+//this is the page for the editing items by the admin
 error_reporting(0);
 include_once 'header.php';
 include_once '../src/model/DbContext.php';
 include_once '../src/model/item.php';
 include_once '../src/model/category.php';
 
+//user input for the 'EditItem' function
 if (!isset($db)) {
     $db = new DbContext();
 }
@@ -28,6 +30,7 @@ if (isset($_POST['EditItem']))
             <select class="custom-select" id="item_id" name="item_id">
                 <option selected>Choose...</option>
                 <?php
+                // php to prepopulate a dropdown
                 $optionString = "";
 
                 $db = new DbContext();
@@ -54,6 +57,7 @@ if (isset($_POST['EditItem']))
             <select class="custom-select" id="category_id" name="category_id">
                 <option selected>Choose...</option>
                 <?php
+                // php to prepopulate a dropdown
                 $optionString = "";
 
                 $db = new DbContext();

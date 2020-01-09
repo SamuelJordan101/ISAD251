@@ -1,4 +1,5 @@
 <?php
+//this is the page for the admin to view all the items
 include_once 'header.php';
 include_once '../src/model/DbContext.php';
 ?>
@@ -20,6 +21,8 @@ include_once '../src/model/DbContext.php';
 
         <?php
         $Item_Row = "";
+
+        //getting the data and outputting it in a table
 
         $db = new DbContext();
         $items = $db->ItemView();

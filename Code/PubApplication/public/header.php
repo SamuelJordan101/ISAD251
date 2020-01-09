@@ -1,4 +1,5 @@
 <?php
+//this is the main header data which is included in every page
 date_default_timezone_set('Europe/London');
 
 ?>
@@ -32,6 +33,7 @@ date_default_timezone_set('Europe/London');
     <a class="navbar-brand" href="javascript:history.back()"><img src="../assets/img/samspub.png"
                                                                   class="d-inline-block align-top"
                                                                   width="220px" height="45px"></a>
+    <a href="javascript:history.back()" class="btn btn-secondary" role="button" style="margin-left: 70%">Back</a>
     <a href="login.php" class="btn btn-info" role="button">Sign Out</a>
 </nav>
 </body>

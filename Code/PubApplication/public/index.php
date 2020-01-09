@@ -1,4 +1,5 @@
 <?php
+//this is the main customer page which has buttons to each of the functions
 include_once 'header.php';
 include_once '../src/model/DbContext.php';
 include_once '../src/model/item.php';
