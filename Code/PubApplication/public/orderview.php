@@ -43,9 +43,8 @@ include_once '../src/model/DbContext.php';
     <thead>
     <tr>
         <th scope="col">Order ID</th>
-        <th scope="col">User ID</th>
-        <th scope="col">Order Date</th>
-        <th scope="col">Table Number</th>
+        <th scope="col">Item ID</th>
+        <th scope="col">Item Quantity</th>
     </tr>
     </thead>
     <tbody>
@@ -55,11 +54,11 @@ include_once '../src/model/DbContext.php';
     $Item_Row = "";
 
     $db = new DbContext();
-    $items = $db->OrderView();
+    $items = $db->OrderItemView();
 
     if ($items) {
         foreach ($items as $item) {
-            $Item_Row .= "<tr><td>" . $item->order_id() . "</td>" . "<td>" . $item->user_id() . "</td>" . "<td>" . $item->order_date() . "</td>" . "<td>" . $item->table_number() . "</td>" . "</td></tr>";
+            $Item_Row .= "<tr><td>" . $item->order_id() . "</td>" . "<td>" . $item->item_id() . "</td>" . "<td>" . $item->item_quantity() . "</td>" . "</td></tr>";
         }
     }
     echo $Item_Row;

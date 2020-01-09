@@ -17,11 +17,11 @@ class orderitem
         return $this->order_id;
     }
 
-    public function user_id() {
+    public function item_id() {
         return $this->item_id;
     }
 
-    public function order_date() {
+    public function item_quantity() {
         return $this->item_quantity;
     }
 

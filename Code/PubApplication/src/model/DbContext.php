@@ -1,6 +1,7 @@
 <?php
 include_once 'item.php';
-include_once  'orders.php';
+include_once 'orders.php';
+include_once 'orderitem.php';
 
 class DbContext
 {
@@ -130,4 +131,70 @@ class DbContext
         return $return;
     }
 
+    public function Categories()
+    {
+        $sql = "SELECT * FROM `category`";
+
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        $ViewAllCategories = [];
+
+        if($resultSet)
+        {
+            foreach ($resultSet as $row)
+            {
+                $ViewCategories = new category($row['category_id'],$row['category_name']);
+                $ViewAllCategories[] = $ViewCategories;
+            }
+        }
+        return $ViewAllCategories;
+    }
+
+    public function OrderItemView()
+    {
+        $sql = "SELECT * FROM `orderitem`";
+
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+        $resultSet = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        $ViewAllOrderItems = [];
+
+        if($resultSet)
+        {
+            foreach ($resultSet as $row)
+            {
+                $ViewOrderItems = new orderitem($row['order_id'],$row['item_id'],$row['item_quantity']);
+                $ViewAllOrderItems[] = $ViewOrderItems;
+            }
+        }
+        return $ViewAllOrderItems;
+    }
+
+    public function OrderItemAdd($request) {
+        $sql = "CALL OrderAdd(:OrderID, :ItemID, :ItemQuantity)";
+        $statement = $this->connection->prepare($sql);
+
+        $statement->bindParam(':OrderID', $request->order_id(), PDO::PARAM_INT);
+        $statement->bindParam(':ItemID', $request->item_id(), PDO::PARAM_INT);
+        $statement->bindParam(':ItemQuantity', $request->item_quantity(), PDO::PARAM_INT);
+
+        $return = $statement->execute();
+        return $return;
+    }
+
+    public function AdminItemAdd($request) {
+        $sql = "CALL AdminNewItem(:CategoryID, :ItemName, :ItemCost, :ItemAmount)";
+        $statement = $this->connection->prepare($sql);
+
+        $statement->bindParam(':CategoryID', $request->category_id(), PDO::PARAM_INT);
+        $statement->bindParam(':ItemName', $request->item_name(), PDO::PARAM_STR);
+        $statement->bindParam(':ItemCost', $request->item_cost(), PDO::PARAM_INT);
+        $statement->bindParam(':ItemAmount', $request->item_amount(), PDO::PARAM_INT);
+
+        $return = $statement->execute();
+        return $return;
+    }
 }

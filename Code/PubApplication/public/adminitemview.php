@@ -4,7 +4,7 @@ include_once '../src/model/DbContext.php';
 ?>
 
 <body style="text-align: center">
-<h1>All Available Items</h1><br>
+<h1>Current Items</h1><br>
 
 <table class="table" style="width: 50%; margin-left: 25%">
     <thead>
@@ -22,7 +22,7 @@ include_once '../src/model/DbContext.php';
         $Item_Row = "";
 
         $db = new DbContext();
-        $items = $db->AvailableItems();
+        $items = $db->ItemView();
 
         if ($items) {
             foreach ($items as $item) {

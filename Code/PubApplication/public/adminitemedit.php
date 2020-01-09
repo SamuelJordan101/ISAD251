@@ -3,6 +3,7 @@ error_reporting(0);
 include_once 'header.php';
 include_once '../src/model/DbContext.php';
 include_once '../src/model/item.php';
+include_once '../src/model/category.php';
 
 if (!isset($db)) {
     $db = new DbContext();
@@ -22,17 +23,50 @@ if (isset($_POST['EditItem']))
     <div class="form-row" style="margin-left: 25%; width: 50%">
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-default">Item ID</span>
+                <label class="input-group-text" for="inputGroupSelect01">Item ID</label>
             </div>
-            <input type="text" name="item_id" id="item_id" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <select class="custom-select" id="item_id" name="item_id">
+                <option selected>Choose...</option>
+                <?php
+                $optionString = "";
+
+                $db = new DbContext();
+                $item = $db->ItemView();
+
+                if ($item) {
+                    foreach ($item as $items) {
+                        $optionString.="<option value=".$items->item_id().">".$items->item_name()." (".$items->item_id().")</option>";
+                    }
+                }
+
+
+
+                echo $optionString;
+                ?>
+            </select>
         </div>
     </div>
     <div class="form-row" style="margin-left: 25%; width: 50%">
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-default">Category ID</span>
+                <label class="input-group-text" for="inputGroupSelect01">Category ID</label>
             </div>
-            <input type="text" name="category_id" id="category_id" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <select class="custom-select" id="category_id" name="category_id">
+                <option selected>Choose...</option>
+                <?php
+                $optionString = "";
+
+                $db = new DbContext();
+                $category = $db->Categories();
+
+                if ($category) {
+                    foreach ($category as $categories) {
+                        $optionString.="<option value=".$categories->category_id().">".$categories->category_name()." (".$categories->category_id().")</option>";
+                    }
+                }
+                echo $optionString;
+                ?>
+            </select>
         </div>
     </div>
     <div class="form-row" style="margin-left: 25%; width: 50%">

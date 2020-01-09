@@ -23,7 +23,7 @@ include_once '../src/model/DbContext.php';
     $Item_Row = "";
 
     $db = new DbContext();
-    $items = $db->AllOrders();
+    $items = $db->OrderView();
 
     if ($items) {
         foreach ($items as $item) {

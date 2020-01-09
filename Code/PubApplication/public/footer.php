@@ -4,13 +4,14 @@
 
 <style>
     .footer {
-        position: fixed;
+        position: absolute;
         left: 0;
         bottom: 0;
         width: 100%;
         background-color: #e3f2fd;
         text-align: left;
         font-size: small;
+        height: 100px;
     }
 
 </style>
