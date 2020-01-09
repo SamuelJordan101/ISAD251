@@ -30,10 +30,12 @@ date_default_timezone_set('Europe/London');
 </style>
 <body>
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <div class="row-fluid">
     <a class="navbar-brand" href="javascript:history.back()"><img src="../assets/img/samspub.png"
                                                                   class="d-inline-block align-top"
                                                                   width="220px" height="45px"></a>
-    <a href="javascript:history.back()" class="btn btn-secondary" role="button" style="margin-left: 70%">Back</a>
-    <a href="login.php" class="btn btn-info" role="button">Sign Out</a>
+    <a href="javascript:history.back()" class="pull-right btn btn-secondary" role="button">Back</a>
+    <a href="login.php" class="pull-right btn btn-info" style="margin-left: 5px;" role="button">Sign Out</a>
+    </div>
 </nav>
 </body>
